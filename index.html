@@ -115,24 +115,5 @@
 <!-- Scripts JS -->
 <script src="./script.js"></script>
 
-<script>
-// Script para o pop-up
-document.getElementById('comprar-ingressos').onclick = function() {
-   const popup = document.getElementById('popup');
-   popup.classList.add('show'); // Adiciona a classe show para exibir o pop-up
-}
-
-document.getElementById('close-popup').onclick = function() {
-   const popup = document.getElementById('popup');
-   popup.classList.remove('show'); // Remove a classe show para ocultar o pop-up
-}
-
-window.onclick = function(event) {
-   if (event.target == document.getElementById('popup')) {
-       document.getElementById('popup').classList.remove('show');
-   }
-}
-</script>
-
 </html>
 
