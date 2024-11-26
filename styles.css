@@ -1,0 +1,142 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Cor de fundo suave */
+}
+
+header {
+    background-color: #0056b3; /* Azul escuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamanho maior para o título */
+    font-family: 'Montserrat', sans-serif; /* Fonte para o título */
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar linhas em telas menores */
+}
+
+nav ul.menu li {
+    margin: 0 15px;
+}
+
+nav ul.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Botão de Ingressos */
+nav ul.menu li a.button {
+    background-color: #ff9800; /* Cor do botão */
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+nav ul.menu li a.button:hover {
+    background-color: #e68a00; /* Cor ao passar o mouse */
+}
+
+/* Estilos das Seções */
+h2 {
+    font-size: 2em; /* Aumenta o tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Adiciona margem acima e abaixo do título */
+}
+
+main {
+   padding: 20px;
+}
+
+/* Galeria */
+.galeria-grid {
+   display:grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); /* Layout responsivo */
+   gap:20px; /* Espaçamento entre as imagens */
+}
+
+.image-container {
+   position:relative; /* Para sobreposição */
+   overflow:hidden; /* Para esconder partes da imagem que saem do contêiner */
+}
+
+.galeria-grid img {
+   width:100%; /* Faz com que a imagem ocupe toda a largura do seu contêiner */
+   height:auto; /* Mantém a proporção da imagem */
+   max-width:none; /* Remove limite máximo para permitir responsividade total */
+   border-radius:15px; /* Arredonda os vértices das imagens */
+   transition:.3s ease; /* Transições suaves para transformação e sombra */
+}
+
+.image-container:hover img {
+   transform:scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+   box-shadow:0 8px 16px rgba(0,0,0,.5); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+   background-color:#333;
+   color:white;
+   text-align:center;
+   padding:.5em; /* Aumenta o preenchimento no rodapé */
+}
+
+.redes-sociais {
+   list-style-type:none;
+   padding:.5em;
+   display:flex; /* Alinha os botões em linha */
+   justify-content:center; /* Centraliza os botões */
+}
+
+.redes-sociais li {
+   margin:.5em; /* Espaçamento entre os botões */
+}
+
+.social-button {
+   background-color:#007bff; /* Cor de fundo azul dos botões de redes sociais */
+   color:white; /* Cor do texto dos botões de redes sociais */
+   padding:.5em .75em; /* Preenchimento interno dos botões de redes sociais */
+   border-radius:.25em; /* Bordas arredondadas para os botões de redes sociais */
+   text-decoration:none; /* Remove sublinhado dos links dos botões de redes sociais */
+   display:flex; /* Permite alinhar ícone e texto nos botões de redes sociais */
+   align-items:center; /* Centraliza verticalmente o conteúdo dos botões de redes sociais */
+   transition:.3s ease, transform .3s ease; /* Transições suaves para os botões de redes sociais */
+
+}
+
+.social-button i {
+   margin-right:.25em; /* Espaço entre o ícone e o texto nos botões de redes sociais */ 
+}
+
+.social-button:hover {
+   background-color:#0056b3; /* Cor ao passar o mouse nos botões de redes sociais */ 
+   transform:.1s translateY(-2px); /* Efeito de elevação ao passar o mouse nos botões de redes sociais */ 
+}
+
+/* Media Queries */
+
+@media (max-width:600px) {
+   nav ul.menu {
+       flex-direction:column;
+       align-items:center;
+       margin-bottom:.5em 
+   }
+   
+   nav ul.menu li{
+       margin-bottom:.5em 
+   }
+}
