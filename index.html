@@ -14,15 +14,16 @@
         <nav>
             <ul class="menu">
                 <li><a href="#descricao">Descrição</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#ingressos" class="button">Comprar Ingressos</a></li> <!-- Botão de ingressos -->
+                <li><a href="#!" class="button" id="comprar-ingressos">Comprar Ingressos</a></li> <!-- Botão de ingressos -->
             </ul>
         </nav>
     </header>
 
-    <main id="descricao">
-        <section>
+    <main>
+        <section id="descricao" class="descricao-evento">
             <h2>Descrição do Evento</h2>
             <p><strong>Data:</strong> 22 de abril de 2024</p>
             <p><strong>Local:</strong> Centro de Convenções Anhembi, São Paulo</p>
@@ -30,27 +31,70 @@
             <p>Além disso, haverá oportunidades de networking para que você possa se conectar com outros profissionais, trocar ideias e explorar novas colaborações. Não perca a chance de ficar por dentro das últimas tendências em tecnologia e inovação!</p>
             <p>Garanta seu ingresso e venha fazer parte dessa experiência única que promete inspirar e transformar sua carreira!</p>
         </section>
+
+        <!-- Seção FAQ Atualizada -->
+        <section id="faq" class="faq-evento">
+            <h2>Perguntas Frequentes (FAQ)</h2>
+            <div class="faq-item">
+                <h3>Como posso comprar ingressos?</h3>
+                <p>Os ingressos podem ser comprados diretamente pelo nosso site na seção "Comprar Ingressos".</p>
+            </div>
+            <div class="faq-item">
+                <h3>Haverá estacionamento disponível?</h3>
+                <p>Sim, haverá estacionamento no local do evento. Recomendamos chegar cedo para garantir uma vaga.</p>
+            </div>
+            <div class="faq-item">
+                <h3>O evento será presencial ou online?</h3>
+                <p>O Tech Summit 2024 será um evento presencial, mas também ofereceremos algumas palestras online para aqueles que não puderem comparecer.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Quais são as políticas de reembolso?</h3>
+                <p>Os ingressos são reembolsáveis até 30 dias antes do evento. Após essa data, não será possível realizar o reembolso.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Haverá alimentação disponível no local?</h3>
+                <p>Sim, teremos várias opções de alimentação no local, incluindo opções vegetarianas e veganas.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Quem são os palestrantes confirmados?</h3>
+                <p>A lista completa de palestrantes será divulgada em breve em nosso site. Fique atento para atualizações!</p>
+            </div>
+            <div class="faq-item">
+                <h3>Como posso entrar em contato com a organização do evento?</h3>
+                <p>Você pode entrar em contato conosco através das nossas redes sociais.</p>
+            </div>
+
+        </section>
+
+        <!-- Seção Galeria -->
+        <section id="galeria" class="galeria-evento">
+            <h2>Galeria</h2>
+            <div class="galeria-grid">
+                <!-- Usando um loop para facilitar a manutenção -->
+                <div class="image-container">
+                    <img src="imagem1.png" alt="Imagem do evento 1">
+                </div>
+                <div class="image-container">
+                    <img src="imagem2.png" alt="Imagem do evento 2">
+                </div>
+                <div class="image-container">
+                    <img src="imagem3.png" alt="Imagem do evento 3">
+                </div>
+                <div class="image-container">
+                    <img src="imagem4.png" alt="Imagem do evento 4">
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <section id="galeria">
-        <h2>Galeria</h2>
-        <div class="galeria-grid">
-            <!-- Usando um loop para facilitar a manutenção -->
-            <div class="image-container">
-                <img src="imagem1.png" alt="Imagem do evento 1">
-            </div>
-            <div class="image-container">
-                <img src="imagem2.png" alt="Imagem do evento 2">
-            </div>
-            <div class="image-container">
-                <img src="imagem3.png" alt="Imagem do evento 3">
-            </div>
-            <div class="image-container">
-                <img src="imagem4.png" alt="Imagem do evento 4">
-            </div>
-        </div>
-    </section>
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <span class="close-btn" id="close-popup">&times;</span>
+        <p>Venda de ingressos em breve!</p>
+    </div>
 
+    <!-- Rodapé -->
     <footer id="contato">
         <p>Siga-nos nas redes sociais!</p>
         <ul class="redes-sociais">
@@ -61,5 +105,34 @@
         <p>&copy; 2024 Tech Summit. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Scripts -->
+    <!-- Adicione um arquivo JS externo se necessário -->
+    <!-- Script para o pop-up -->
+    <!-- ... -->
+
 </body>
+
+<!-- Scripts JS -->
+<script src="./script.js"></script>
+
+<script>
+// Script para o pop-up
+document.getElementById('comprar-ingressos').onclick = function() {
+   const popup = document.getElementById('popup');
+   popup.classList.add('show'); // Adiciona a classe show para exibir o pop-up
+}
+
+document.getElementById('close-popup').onclick = function() {
+   const popup = document.getElementById('popup');
+   popup.classList.remove('show'); // Remove a classe show para ocultar o pop-up
+}
+
+window.onclick = function(event) {
+   if (event.target == document.getElementById('popup')) {
+       document.getElementById('popup').classList.remove('show');
+   }
+}
+</script>
+
 </html>
+
